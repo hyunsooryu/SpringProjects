@@ -15,6 +15,9 @@ public class MvcConfig implements WebMvcConfigurer {
     private final AuthInterceptor authInterceptor;
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        /**
+            내가 원하는 Path에만 인터셉트를 동작시키려면 어떻게 해야할까?
+        **/
         registry.addInterceptor(authInterceptor);
     }
 }
